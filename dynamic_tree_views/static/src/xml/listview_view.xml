@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<templates t-name="selectcolumns">
+
+    <t t-name="ColumnSelectionDropDown">
+        <t t-foreach="columns" t-as="column">
+            <li class="item_column">
+                <a>
+                    <div class="o_checkbox" style="vertical-align:middle;">
+                        <input type="checkbox" t-att-data-name="column.field_name" class="columnCheckbox"
+                               t-att-checked="column.invisible ? undefined : 'checked'"/>
+                        <span/>
+                    </div>
+                    <t t-esc="column.label"/>
+                </a>
+            </li>
+        </t>
+    </t>
+</templates>
